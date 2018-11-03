@@ -4,26 +4,31 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
     res.status(200).json({
-        data: 'Data get as order'
+        message: 'Data get as order'
     });
 });
 
 router.post('/', (req, res, next) => {
+    const order = {
+        profileId: req.body.profileId,
+        quantity: req.body.quantity
+    };
     res.status(201).json({
-        data: 'Data posted as order'
+        message: 'Data posted as order',
+        order: order
     });
 })
 
 router.get('/:orderId', (req, res, next) => {
     res.status(200).json({
-        data: 'get by orderId',
+        message: 'get by orderId',
         orderId: req.params.orderId
     });
 });
 
 router.delete('/:orderId', (req, res, next)=> {
     res.status(200).json({
-        data: 'order Deleted',
+        message: 'order Deleted',
         orderId: req.params.orderId
     });
 })

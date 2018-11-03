@@ -8,9 +8,14 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+    const profile = {
+        name: req.body.name,
+        price: req.body.price
+    };
     res.status(201).json({
-        message: 'handling post request to /profiles'
-    })
+        message: 'handling post request to /profiles',
+        createdProfile: profile
+    });
 });
 
 // get profile by id .....
@@ -18,7 +23,7 @@ router.get('/:name', (req, res, next) => {
     // const name = req.params.name.replace(/[^a-zA-Z ]/g, '').toLowerCase().replace(/\s+/g, '-');
     if (name === 'name') {
         res.status(200).json({
-            data: 'you get the profile by name...',
+            message: 'you get the profile by name...',
             name: name
         });
     } else {
