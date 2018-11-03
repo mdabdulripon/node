@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 
 app.use(morgan('dev'));
+// body parser middleware
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
@@ -35,6 +36,5 @@ app.use((err, req, res, next) => {
         }
     });
 });
-
 
 module.exports = app;
