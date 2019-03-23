@@ -1,4 +1,9 @@
 const _http = require('http');
+const Person = require('./person');
+
+
+const parson1 = new Person('john doe', 30)
+console.log(`parson1 :`, parson1);
 
 const server = _http.createServer((req, res, next) => {
     // ! Request
