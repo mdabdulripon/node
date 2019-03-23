@@ -1,40 +1,24 @@
-const express = require('express');
-const app = express();
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
+const _http = require('http');
 
+const server = _http.createServer((req, res, next) => {
+    // ! Request
+    console.log(`request url :`, req.url);
+    console.log(`request headers :`, req.headers);
+    console.log(`request method :`, req.method);
 
-app.use(morgan('dev'));
-// body parser middleware
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+    // ! Response
+    res.setHeader('Content-Type', 'text/html');
+    res.write('<html>');
 
+        res.write('<head>');
+            res.write('<title>Node js</title>');
+        res.write('</head>');
 
-// Routes ......
-const productRoute = require('./api/routes/profiles.js');
-const orderRoute = require('./api/routes/order.js');
+        res.write('<body>');
+            res.write('<p>Welcome to Node js app</p>');
+        res.write('</body>');
 
-
-// initials route:: get an post route ......
-app.use('/profiles', productRoute);
-app.use('/orders', orderRoute);
-
-
-//route route
-app.use((req, res, next) => {
-    const err = new Error('NOT FOUND');
-    err.status = 400;
-    next(err);
-})
-
-// error middleware 
-app.use((err, req, res, next) => {
-    res.status(err.status || 500);
-    res.json({
-        err: {
-            message: err.message
-        }
-    });
+    res.write('</html>');
 });
 
-module.exports = app;
+server.listen(3000);
