@@ -39,5 +39,12 @@
 - [x] Node js is different from JavaScript when it comes to global scope. In the browser's JavaScript, variables declared without var keyword become global. In Node.js, everything becomes local by default.
 
 
+# Some Useful module and its use:
+-[x] Path : The path module provides utilities for working with file and directory paths. It can be accessed using: `const path = require('path')`.
+
+
+
+
 ## Reference
 -[x] Node js Built-in [Modules](https://www.w3schools.com/nodejs/ref_modules.asp).
+-[x] [docs](https://nodejs.org/docs/)
