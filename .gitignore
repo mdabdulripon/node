@@ -60,5 +60,7 @@ typings/
 # next.js build output
 .next
 
-# IDEA config files
+# ID config file
 .idea/
+.vscode/
+.DS_Store
