@@ -7,6 +7,8 @@
 - [x] Shared library - underscore js.
 
 
-### sync - blocking
+### Synchronous - blocking
+Synchronous code running subsequently, which means each statement of code running one after another.
 
-### async - non blocking
+### Asynchronous - non blocking
+
