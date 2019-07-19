@@ -12,3 +12,9 @@ Synchronous code running subsequently, which means each statement of code runnin
 
 ### Asynchronous - non blocking
 
+### Module 
+node js introduce three type of module
+- [x] Core modules : 
+*The core modules include bare minimum functionalities of Node.js. These core modules are compiled into its binary distribution and load automatically when Node.js process starts. However, you need to import the core module first in order to use it in your application. For example - [find core module](https://www.w3schools.com/nodejs/ref_modules.asp)*
+- [x] Local modules: *Local modules are modules created locally in your Node.js application. These modules include different functionalities of your application in separate files and folders. You can also package it and distribute it via NPM, so that Node.js community can use it.*
+- [x] Third party modules
