@@ -43,4 +43,17 @@
 - In Node.js, global object represents the global scope.
 
 
+#### [Execution Context?](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff)
+- An Execution Context is an abstract concept of an environment where the JavaScript code is evaluated and executed. Whenever any code is run in JavaScript, it’s run inside an execution context.
+- The function code executes inside the function execution context, and the global code executes inside the global execution context. Each function has its own execution context.*
+
+#### [What is Call Stack?](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff)
+- The call stack as its name implies is a stack with a LIFO (Last in, First out) structure, which is used to store all the execution context created during the code execution.
+- The call stack has a LIFO structure which means that the items can be added or removed from the top of the stack only.
+
+#### What is Callback Queue?
+- When callback is completed it is pushed to the callback queue. But the callback is not immediately executed, and that’s where the event loop kicks in.
+
+#### [What is Event Loop?](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff)
+- The job of the Event loop is to look into the call stack and determine if the call stack is empty or not. If the call stack is empty, it looks into the message queue to see if there’s any pending callback waiting to be executed.
 
